@@ -1,0 +1,23 @@
+{
+  "skill_name": "web-directory-scraper",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "can you help gather these public info of the companies on these sites, and put them in a excel file or a sheet? https://www.tmdia.org.tw/members/page=1",
+      "expected_output": "An Excel file containing all 424 companies from all 43 pages of the TMDIA member directory, with all available fields (company name, address, contact, phone, fax, email, website, capital, employees, products, join date, overseas factories)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to collect the full member list from the Taiwan Electrical and Electronic Manufacturers' Association website at https://b2b.teema.org.tw/CompanyList.aspx — please get all companies and put them into a spreadsheet",
+      "expected_output": "An Excel file containing all member companies from TEEMA with available fields like company name, contact info, products, etc.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "幫我把這個公會的會員名錄全部抓下來做成Excel：https://www.tami.org.tw/members.html 要包含所有頁面的資料，不能有遺漏",
+      "expected_output": "An Excel file with complete member data from all pages of the TAMI directory, with verification that all records are captured",
+      "files": []
+    }
+  ]
+}
