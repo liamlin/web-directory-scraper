@@ -5,18 +5,49 @@
       "id": 1,
       "prompt": "can you help gather these public info of the companies on these sites, and put them in a excel file or a sheet? https://www.tmdia.org.tw/members/page=1",
       "expected_output": "An Excel file containing all 424 companies from all 43 pages of the TMDIA member directory, with all available fields (company name, address, contact, phone, fax, email, website, capital, employees, products, join date, overseas factories)",
+      "tags": ["pagination", "server-rendered", "CJK", "detail-enrichment"],
       "files": []
     },
     {
       "id": 2,
       "prompt": "I need to collect the full member list from the Taiwan Electrical and Electronic Manufacturers' Association website at https://b2b.teema.org.tw/CompanyList.aspx — please get all companies and put them into a spreadsheet",
       "expected_output": "An Excel file containing all member companies from TEEMA with available fields like company name, contact info, products, etc.",
+      "tags": ["pagination", "api-fetching", "CJK"],
       "files": []
     },
     {
       "id": 3,
       "prompt": "幫我把這個公會的會員名錄全部抓下來做成Excel：https://www.tami.org.tw/members.html 要包含所有頁面的資料，不能有遺漏",
       "expected_output": "An Excel file with complete member data from all pages of the TAMI directory, with verification that all records are captured",
+      "tags": ["pagination", "CJK", "verification"],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Scrape this directory of UK solicitors into a spreadsheet: https://www.lawsociety.org.uk/career-advice/individual-accreditations/find-a-solicitor — I need name, firm, location, and specialization",
+      "expected_output": "An Excel file with solicitor listings including name, firm, location, and specialization fields. Should handle English-language content and potentially API-based pagination.",
+      "tags": ["english-only", "api-fetching", "specific-fields"],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "This page has a list of about 30 local restaurants with their info: https://example-town.com/restaurants — can you grab it all into a CSV?",
+      "expected_output": "A CSV file with all ~30 restaurants and their details. Should use the small-dataset direct-return strategy since <50 records. Respects user's CSV format preference instead of defaulting to Excel.",
+      "tags": ["single-page", "small-dataset", "csv-format"],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Extract all products from this Shopify store's collection pages into a spreadsheet: https://example-store.myshopify.com/collections/all",
+      "expected_output": "An Excel file with all products. Should detect client-side rendering (Path D), test whether fetch() works for detail pages independently, and fall back to Method C navigation if needed.",
+      "tags": ["js-rendered", "hybrid-rendering", "e-commerce"],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "https://example-association.org/members/category/gold — this site lists members by category (gold, silver, bronze) with no numbered pagination. Get all members from all categories into one spreadsheet.",
+      "expected_output": "An Excel file combining members from all category pages into a single sheet. Should detect category-based navigation rather than numbered pagination and iterate through all categories.",
+      "tags": ["category-navigation", "no-pagination", "multi-category"],
       "files": []
     }
   ]

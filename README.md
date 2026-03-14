@@ -72,9 +72,18 @@ The skill is a detailed prompt (`SKILL.md`) that teaches Claude a systematic wor
 ## Project structure
 
 ```
-├── SKILL.md              # The skill prompt (this is the core of the project)
+├── SKILL.md              # The skill prompt (core workflow, ~1,100 words)
+├── examples/             # JavaScript code examples loaded on demand
+│   ├── api-fetching.js       # Method A: JSON API pagination
+│   ├── html-parsing.js       # Method B: fetch() + DOMParser
+│   ├── detail-enrichment.js  # Parallel detail page scraping
+│   ├── excel-generation.js   # SheetJS + data transfer strategies
+│   └── verification.js       # Completeness verification
+├── references/           # Detailed guides loaded on demand
+│   ├── troubleshooting.md    # Common pitfalls and what to avoid
+│   └── batch-sizing.md       # Timeout management and batch sizing
 ├── evals/
-│   └── evals.json        # Test cases for benchmarking
+│   └── evals.json        # Test cases for benchmarking (7 scenarios)
 └── README.md
 ```
 
